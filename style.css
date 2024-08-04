@@ -1,0 +1,145 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("./peakpx.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 20%;
+    height: 85%;
+    padding: 0.3rem;
+    border: 1px solid rgb(160, 160, 160);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    overflow: hidden;
+    background-color: rgb(6, 6, 6);
+}
+
+.screen {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1.2rem;
+    background: transparent;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.currentCalculation {
+    font-weight: 500;
+    font-size: 45px;
+}
+
+.previousNumber {
+    font-weight: 400;
+    color: rgb(106, 106, 106);
+    cursor: pointer;
+}
+
+.contents {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.5rem;
+    padding: 0.3rem;
+    width: 100%;
+    height: 60%;
+}
+
+.eachButtons {
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.operators {
+    background-color: rgb(255, 126, 21);
+    color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.equals{
+    background-color: rgb(255, 126, 21);
+    color: black;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.allClear{
+    background-color: rgb(75, 75, 75);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Delete{
+    background-color: rgb(75, 75, 75);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+
+
+/* Define grid area for each button */
+.allClear { grid-area: 1 / 1 / 2 / 2; }
+.Delete { grid-area: 1 / 2 / 2 / 3; }
+.Divide { grid-area: 1 / 3 / 2 / 4; }
+.multiply { grid-area: 1 / 4 / 2 / 5; }
+.number:nth-child(5) { grid-area: 2 / 1 / 3 / 2; }
+.number:nth-child(6) { grid-area: 2 / 2 / 3 / 3; }
+.number:nth-child(7) { grid-area: 2 / 3 / 3 / 4; }
+.substract { grid-area: 2 / 4 / 3 / 5; }
+.number:nth-child(9) { grid-area: 3 / 1 / 4 / 2; }
+.number:nth-child(10) { grid-area: 3 / 2 / 4 / 3; }
+.number:nth-child(11) { grid-area: 3 / 3 / 4 / 4; }
+.addition { grid-area: 3 / 4 / 5 / 5; /* Spans two rows */ }
+.number:nth-child(13) { grid-area: 4 / 1 / 5 / 2; }
+.number:nth-child(14) { grid-area: 4 / 2 / 5 / 3; }
+.number:nth-child(15) { grid-area: 4 / 3 / 5 / 4; }
+.zeroSign { grid-area: 5 / 1 / 6 / 3; /* Spans two columns */ }
+.point { grid-area: 5 / 3 / 6 / 4; }
+.equals { grid-area: 5 / 4 / 6 / 5; }
